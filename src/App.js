@@ -2,14 +2,16 @@ import React from "react";
 
 const App = () => {
   return (
-    <div>
+    <div className="px-1">
       <header
-        className="bg-cover bg-center h-screen"
+        className="bg-cover bg-center h-screen relative"
         style={{
           backgroundImage: "url('./house.jpeg')",
         }}
       >
-        <nav className="container mx-auto py-4 flex justify-between items-center">
+        {/* Add overlay with semi-transparent background */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white-500 to-purple-500 opacity-50"></div>
+        <nav className="container mx-auto py-4 flex justify-between items-center relative z-10">
           <div className="flex flex-col items-start">
             <a
               href="/"
@@ -20,13 +22,13 @@ const App = () => {
               </span>
             </a>
             <span
-              className="text-gray-600 text-lg mt-1"
+              className="text-white text-lg mt-1"
               style={{ fontFamily: "fantasy" }}
             >
               Your Trustworthy Realtor
             </span>
           </div>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 hidden md:flex">
             <li>
               <a href="/" className="text-white">
                 Home
@@ -49,7 +51,7 @@ const App = () => {
             </li>
           </ul>
         </nav>
-        <div className="bg-gradient-to-r from-white-500 to-purple-500 opacity-75 h-full flex flex-col justify-center items-center text-white">
+        <div className="bg-gradient-to-r from-white-500 to-purple-500 opacity-75 h-full flex flex-col justify-center items-center text-white relative z-10">
           <h1 className="text-5xl font-bold mb-4">Find Your Dream Home</h1>
           <p className="text-xl mb-8">
             Discover the perfect property with Khem Adhikari Real Estate
@@ -135,6 +137,16 @@ const App = () => {
         </div>
       </section>
 
+      <section className="bg-gray-100 py-16">
+        <iframe
+          src="https://tally.so/r/wg0pJK"
+          width="70%"
+          height="800px"
+          frameBorder="0"
+          style={{ border: "none" }}
+        ></iframe>
+      </section>
+
       <section className="bg-blue-500 text-white py-16">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">
@@ -151,16 +163,13 @@ const App = () => {
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Contact Information</h3>
             <p>
-              <a href="tel:+1234567890" className="text-white-400">
-                +1 (234) 567-890
+              <a href="tel:+17146797165" className="text-white-400">
+                +1 (714)679-7165
               </a>
             </p>
             <p>
-              <a
-                href="mailto:khem.adhikari@example.com"
-                className="text-blue-400"
-              >
-                khem.adhikari@example.com
+              <a href="mailto:khemlal@hotmail.com" className="text-blue-400">
+                khemlal@hotmail.com
               </a>
             </p>
             <div className="mt-4">
@@ -212,7 +221,15 @@ const App = () => {
           </div>
           <div className="w-full md:w-1/3">
             <h3 className="text-xl font-bold mb-2">Legal</h3>
-            <p>Real Estate License: ABC123</p>
+            <p>Khem Adhikari</p>
+            <span
+              className="text-white text-xs mt-1"
+              style={{ fontFamily: "fantasy" }}
+            >
+              Your Trustworthy Realtor
+            </span>
+
+            <p>DRE#02187254</p>
             <p>
               <a href="/privacy-policy" className="text-blue-400">
                 Privacy Policy
