@@ -6,12 +6,54 @@ const App = () => {
       <header
         className="bg-cover bg-center h-screen"
         style={{
-          backgroundImage: "url('https://example.com/home-background.jpg')",
+          backgroundImage: "url('./house.jpeg')",
         }}
       >
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 opacity-75 h-full flex flex-col justify-center items-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Khem Adhikari Real Estate</h1>
-          <p className="text-xl mb-8">Find Your Dream Home Today</p>
+        <nav className="container mx-auto py-4 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <a
+              href="/"
+              className="flex items-center text-white text-2xl font-bold"
+            >
+              <span className="bg-white px-3 py-1 rounded-lg mr-2 font-serif text-3xl text-gray-800 shadow-md">
+                Khem Realty
+              </span>
+            </a>
+            <span
+              className="text-gray-600 text-lg mt-1"
+              style={{ fontFamily: "fantasy" }}
+            >
+              Your Trustworthy Realtor
+            </span>
+          </div>
+          <ul className="flex space-x-4">
+            <li>
+              <a href="/" className="text-white">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/listings" className="text-white">
+                Listings
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="text-white">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="text-white">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className="bg-gradient-to-r from-white-500 to-purple-500 opacity-75 h-full flex flex-col justify-center items-center text-white">
+          <h1 className="text-5xl font-bold mb-4">Find Your Dream Home</h1>
+          <p className="text-xl mb-8">
+            Discover the perfect property with Khem Adhikari Real Estate
+          </p>
           <div>
             <button className="bg-white text-blue-500 font-bold py-2 px-4 rounded-full mr-4">
               See Listings
@@ -22,11 +64,85 @@ const App = () => {
           </div>
         </div>
       </header>
+      <section className="container mx-auto py-16">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Featured Listings
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Add featured listings */}
+          <div className="bg-white shadow-lg rounded-lg">
+            <img
+              src="https://example.com/listing1.jpg"
+              alt="Listing 1"
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-bold mb-2">Luxury Villa</h3>
+              <p className="text-gray-600">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <div className="mt-4 flex justify-between items-center">
+                <span className="text-blue-500 font-bold">$1,500,000</span>
+                <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Add more featured listings */}
+        </div>
+      </section>
 
-      <section className="py-16">
-        <h2 className="text-3xl font-bold text-center mb-8">Active Listings</h2>
-        <div className="carousel">
-          {/* Add carousel component for displaying active listings */}
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            About Khem Adhikari
+          </h2>
+          <div className="flex flex-col md:flex-row items-center">
+            <img
+              src="https://example.com/khem-adhikari.jpg"
+              alt="Khem Adhikari"
+              className="w-64 h-64 rounded-full mb-4 md:mb-0 md:mr-8"
+            />
+            <div>
+              <p className="text-lg mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                at mauris vel velit bibendum tempus. Sed euismod velit vel
+                bibendum malesuada. Praesent in eros non velit aliquam cursus.
+              </p>
+              <p className="text-lg">
+                Phasellus sed vestibulum quam. Nulla facilisi. Duis in enim vel
+                enim pharetra blandit. Sed vehicula velit vel bibendum
+                malesuada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto py-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Testimonials</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Add testimonials */}
+          <div className="bg-white shadow-lg rounded-lg p-6">
+            <p className="text-lg mb-4">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              at mauris vel velit bibendum tempus."
+            </p>
+            <p className="font-bold">- John Doe</p>
+          </div>
+          {/* Add more testimonials */}
+        </div>
+      </section>
+
+      <section className="bg-blue-500 text-white py-16">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-8">
+            Ready to Find Your Dream Home?
+          </h2>
+          <button className="bg-white text-blue-500 font-bold py-2 px-4 rounded-full">
+            Contact Khem Adhikari
+          </button>
         </div>
       </section>
 
@@ -35,7 +151,7 @@ const App = () => {
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Contact Information</h3>
             <p>
-              <a href="tel:+1234567890" className="text-blue-400">
+              <a href="tel:+1234567890" className="text-white-400">
                 +1 (234) 567-890
               </a>
             </p>
@@ -47,10 +163,52 @@ const App = () => {
                 khem.adhikari@example.com
               </a>
             </p>
+            <div className="mt-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white mr-4"
+              >
+                <i className="fab fa-facebook fa-lg"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white mr-4"
+              >
+                <i className="fab fa-twitter fa-lg"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white"
+              >
+                <i className="fab fa-instagram fa-lg"></i>
+              </a>
+            </div>
           </div>
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
-            <h3 className="text-xl font-bold mb-2">Contact Form</h3>
-            {/* Add contact form */}
+            <h3 className="text-xl font-bold mb-2">Quick Links</h3>
+            <ul>
+              <li>
+                <a href="/listings" className="text-blue-400">
+                  Listings
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-blue-400">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-blue-400">
+                  Contact
+                </a>
+              </li>
+            </ul>
           </div>
           <div className="w-full md:w-1/3">
             <h3 className="text-xl font-bold mb-2">Legal</h3>
