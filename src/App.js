@@ -140,7 +140,7 @@ const App = () => {
       <section className="bg-gray-100 py-16">
         <iframe
           src="https://tally.so/r/wg0pJK"
-          width="70%"
+          width="100%"
           height="800px"
           frameBorder="0"
           style={{ border: "none" }}
